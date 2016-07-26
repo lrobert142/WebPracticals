@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en"><!-- #BeginTemplate "/Templates/mainAll.dwt" --><!-- DW6 -->
+<meta charset="utf-8">
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>CP1406 - Publishing with Dreamweaver &amp; FileZilla</title>
+<script type="text/JavaScript">
+function gopage(pg)
+{
+	var login=prompt("Please enter your login");
+	window.open("http://dunk2.jcu.edu.au/~" + login + '/' + pg);
+}
+</script>
+<!-- #EndEditable -->
+<meta charset="UTF-8">
+<style media="screen" type="text/css">
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0;
+}
+h1, h2, h3, h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+h4 {
+	font-style: italic;
+}
+li {
+	margin-bottom: 0.75em;
+}
+.smaller {
+	font-family: "Times New Roman", Times, serif;
+	font-size: small
+}
+code, .codeandnames {
+	font-family: "Courier New", Courier, mono;
+	text-decoration: none;
+	font-weight: bold
+}
+
+code.section {
+	display:block
+	margin-top: 1em;
+}
+.highlightcolour {
+	color: #FF3300;
+	background-color: #FFFFFF
+}
+.breakhere {
+	page-break-before: always
+}
+.rightpanel {
+	clear: both;
+	float: right;
+	background-color: #f0f3ff;
+	margin-right: .2em;
+	width: 25%;
+	margin-left: 1em;
+	margin-bottom: 30px;
+	border: 1px solid #97bfff;
+}
+.rightpanel h4 {
+	background-color: #FFFFCC;
+	font-size: 0.8em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+.rightpanel p {
+	font-size: 0.9em;
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+.notebox {
+	clear: both;
+	background-color: #FFFFCC;
+	border: #97bfff 1px solid;
+	margin-right: 1.2em;
+	margin-left: 1.2em;
+}
+.notebox h4 {
+	font-size: 1.1em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 1em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: #97bfff;
+}
+.notebox p {
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+	font-size: 0.7em;
+	padding: 5px 3px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #5c5f72;
+	font: 'BazarMedium', Arial, sans-serif;
+	border-radius: 15px 15px 0px 0px;
+	box-shadow: 5px -5px 5px #666;
+}
+#container {
+	margin: 1em;
+}
+#header {
+	padding: 5px 15px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #2c2e38, 2px 2px 0px #5c5f72;
+	font: 1.5em 'BazarMedium', Arial, sans-serif;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 5px 5px 5px #666;
+}
+#footer a {
+	color:#FC3;
+}
+</style>
+</head>
+<body>
+<div id="header">CP1406 - Web Design &amp; Development - JCU</div>
+<div id="container"> <!-- #BeginEditable "main table" -->
+  <h1>Practical - Publishing</h1>
+  <h2>Aims:</h2>
+  <ul>
+    <li>To learn to connect to a Web server and upload files for the Web.</li>
+    <li>To be prepared for submitting your assignments. This is super important. Learn this, and don't leave it to the last minute.</li>
+  </ul>
+  <h2>First:</h2>
+  <ul>
+    <li>When using Dreamweaver, follow rule #1 - <strong>work in a defined site</strong>.</li>
+    <li>Make sure you name your files and directories correctly. <br>
+    On our Web server (a Linux machine) and most Web servers in the world, file names are <strong>case-sensitive</strong> and <strong>should not have spaces</strong>. <br>
+    Your home page file must be called <code><strong>index.html</strong></code><br>
+    Index.html is not index.html is not index.htm is not whatever.whocares...</li>
+    <li>Make sure your site uses relative links (e.g.  src=&quot;images/file.jpg&quot; not src=&quot;file:///C/Users/...&quot;). <br />
+      (It will have done this by default if you always worked in a defined site.)</li>
+  </ul>
+  <div class="notebox">
+    <h4>Off-Campus Access</h4>
+    <p>You will need to setup and use a VPN (Virtual Private Network) in order to access these servers from outside the JCU network. </p>
+    <p><a href="https://www.jcu.edu.au/library/connect/remote-access/making-a-vpn-connection-to-jcu" target="_blank">Details for installing and setting up GlobalProtect to do this are found here.</a></p>
+  </div>
+  <h2>Get Connected:</h2>
+  <p>You can use any FTP program that supports SFTP (Secure File Transfer Protocol) including Fetch, Cyberduck, WinSCP or... <strong>FileZilla</strong> (which is installed on the JCU computers). </p>
+  <ul>
+    <li>Run FileZilla. (For your own computer, get the client from <a href="https://filezilla-project.org" target="_blank">https://filezilla-project.org</a>)</li>
+  </ul>
+  <p>We need to connect to the remote Web server using SFTP. The server name is:</p>
+  <ul>
+    <li>ditweb<strong>cns</strong>.jcu.edu.au - for Cairns students </li>
+    <li>ditweb<strong>tsv</strong>.jcu.edu.au - for Townsville and external students</li>
+  </ul>
+  <p>If you are on your own computer, use the Site Manager (first button) to setup your site so you only have to type it once.</p>
+  <p>If you are on a lab computer, the easiest way is to enter the details in the Quickconnect section with your server, username and password (your password is the usual one for email, LearnJCU, etc.) and the port number <strong>22</strong>, then click the big ol' button.</p>
+  <p><img src="quickconnect.png" width="783" height="31" alt=""/></p>
+  <p>If you get a message about an unknown host key, just accept it - it's safe :)</p>
+  <p>You should now have two panes - your local files (left) and the remote server files. You can drag and drop files between panes or to/from Windows Explorer or Finder (Mac).<br>
+    Yours will look a bit different, but it's something like:</p>
+  <p><img src="filezillaPanes.png" width="896" height="448" alt=""/></p>
+  <span class="highlightcolour">
+  <p>Anything you want to publish on the Web needs to go inside a special folder called:</p>
+  <p style="font-size:xx-large"><strong>public_html</strong></p>
+  </span>
+  <p>To start with, you will not have anything in your public_html folder on the server.<br>
+    We will be using directories to separate our different sites - so create a directory for any site you want to upload... inside public_html:</p>
+  <ul>
+    <li>Create a directory called <strong>me</strong></li>
+    <li>Drag the files for your first About Me site into this folder. <br>
+    (Don't drag just one folder, drag everything inside the folder, making sure that includes index.html.)</li>
+  </ul>
+  <p>Now to view it online, in a Web browser, you go to : </p>
+  <p>	<strong><a href="http://ditwebtsv.jcu.edu.au/~jc123456/me" target="_blank">http://ditwebtsv.jcu.edu.au/~jc123456/me</a></strong></p>
+  <p>but change:</p>
+  <ul>
+    <li> jc123456 to your own login</li>
+    <li>tsv to cns if you're a Cairns student</li>
+    <li>me to whatever other site folder you create in future
+    </li>
+  </ul>
+  <p>What happened?</p>
+  <ul>
+    <li>If this shows you your website, it means you uploaded it correctly (and you have an index.html in the test directory). <br />
+    </li>
+    <li>If you see a list of files, it  means your folder has no index.html in it. </li>
+    <li>If you see a link to a folder (e.g. AboutMe), it means you copied in an extra subfolder - delete this from FileZilla (right pane) and upload everything inside the folder, but not the folder itself.</li>
+    <li>If this did not work (404 maybe), please check back through the instructions to see what you missed (usually spelling/typing or where you put the files... remember it must be inside public_html). </li>
+  </ul>
+  <p>You can also upload directly from your editing program if you prefer...</p>
+  <h2>If you're using PHPStorm:  </h2>
+  <p><a href="https://www.jetbrains.com/phpstorm/help/creating-a-remote-server-configuration.html" target="_blank">Instructions for setting up in PHPStorm can be found at the JetBrains site here.</a></p>
+  <p>&nbsp;</p>
+  <h2>If you're using Dreamweaver:</h2>
+  <p>In Dreamweaver, choose Site &gt; Manage Sites...</p>
+  <ul>
+    <li>With your site selected, click on the pencil icon to edit that site. <br>
+    <img src="mangeSitesPencil.png" width="387" height="166" alt="Manage Sites - Edit" /></li>
+    <li>Click in the left menu where it says Servers...<br />
+      Click the <strong>+</strong> button to add a new server. </li>
+    <li>In the dialog box that comes up, enter your details like the image below (<strong>ditwebtsv.jcu.edu.au</strong> in Tsv or <strong>ditwebcns.jcu.edu.au</strong> in Cns).<br>
+      <br />
+      <strong>Make sure you change FTP to SFTP</strong>. <br />
+      <img src="ditwebDWsetup.png" width="455" height="347" alt=""/><br />
+    </li>
+    <li>Click the <strong>Test</strong> button to make sure Dreamweaver can connect to the server. <br />
+    If it can't, check the details carefully and try again.</li>
+    <li>Click <strong>Save</strong>.</li>
+  </ul>
+  <p><strong>Important: </strong>You need to match the root directory of your local site with the &quot;Root Directory&quot; field in the server setup. (<br>
+  E.g. in the screenshot above, the server root directory is public_html/me - and the site root in Dreamweaver will be a folder containing the index.html file for the &quot;me&quot; site.</p>
+  <p>You can now upload files and folders by clicking on them in the Files panel and then clicking the<strong> up arrow </strong>button.</p>
+  <p><img src="uploadButtons.png" alt="Buttons for uploading" width="295" height="118" /></p>
+  <p> If it asks if you want to put dependent files, choose Yes and it will also upload any images or CSS files that your file references (but not linked html pages). </p>
+  <p>Upload your pages, then view your site in a Web browser.</p>
+  <h2>Get Familiar:</h2>
+  <ul>
+    <li>Every time you make a change to your site (locally), you can just upload it over the top of the old site on the Web (remote). That's how you update a site online.</li>
+    <li>Don't let this be the last time you upload to the server before your assignment is due. Try a few sites (with different folder names, make some changes and re-upload them... <br />
+    <strong style="font-size:xx-large">Make sure you know how to do this.</strong></li>
+  </ul>
+  <p><br />
+  </p>
+  <p><strong>Tech Note:</strong> The following should be done for you automatically, but if not...<br />
+    If you get 403 Forbidden for folders and you do want the browser to show the contents of directories that do not have an index.html/php file in them, you can create a file called <strong>.htaccess</strong> inside public_html that simply contains the following line:<br />
+  <strong>Options +Indexes</strong></p>
+<p>&nbsp;</p>
+<!-- #EndEditable --></div>
+<div id="footer">
+  <p>&copy; Lindsay Ward, <a href="http://www.jcu.edu.au/" target="_blank">James Cook University</a> | <a href="#header" target="_self">To Top</a></p>
+</div>
+</body>
+<!-- #EndTemplate --></html>

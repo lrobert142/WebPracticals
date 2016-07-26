@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><!-- #BeginTemplate "/Templates/mainAll.dwt" --><!-- DW6 -->
+<meta charset="utf-8">
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>CP1406 - JavaScript Practical</title>
+<style type="text/css">
+<!--
+a:hover.awful {
+	color:#FFF; background-color:#FF6; font-size:x-large; margin:5em; border:groove thick red; font-family:Comic Sans, Tahoma, Geneva, sans-serif
+}
+-->
+</style>
+<!-- #EndEditable -->
+<meta charset="UTF-8">
+<style media="screen" type="text/css">
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0;
+}
+h1, h2, h3, h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+h4 {
+	font-style: italic;
+}
+li {
+	margin-bottom: 0.75em;
+}
+.smaller {
+	font-family: "Times New Roman", Times, serif;
+	font-size: small
+}
+code, .codeandnames {
+	font-family: "Courier New", Courier, mono;
+	text-decoration: none;
+	font-weight: bold
+}
+
+code.section {
+	display:block
+	margin-top: 1em;
+}
+.highlightcolour {
+	color: #FF3300;
+	background-color: #FFFFFF
+}
+.breakhere {
+	page-break-before: always
+}
+.rightpanel {
+	clear: both;
+	float: right;
+	background-color: #f0f3ff;
+	margin-right: .2em;
+	width: 25%;
+	margin-left: 1em;
+	margin-bottom: 30px;
+	border: 1px solid #97bfff;
+}
+.rightpanel h4 {
+	background-color: #FFFFCC;
+	font-size: 0.8em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+.rightpanel p {
+	font-size: 0.9em;
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+.notebox {
+	clear: both;
+	background-color: #FFFFCC;
+	border: #97bfff 1px solid;
+	margin-right: 1.2em;
+	margin-left: 1.2em;
+}
+.notebox h4 {
+	font-size: 1.1em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 1em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: #97bfff;
+}
+.notebox p {
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+	font-size: 0.7em;
+	padding: 5px 3px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #5c5f72;
+	font: 'BazarMedium', Arial, sans-serif;
+	border-radius: 15px 15px 0px 0px;
+	box-shadow: 5px -5px 5px #666;
+}
+#container {
+	margin: 1em;
+}
+#header {
+	padding: 5px 15px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #2c2e38, 2px 2px 0px #5c5f72;
+	font: 1.5em 'BazarMedium', Arial, sans-serif;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 5px 5px 5px #666;
+}
+#footer a {
+	color:#FC3;
+}
+</style>
+</head>
+<body>
+<div id="header">CP1406 - Web Design &amp; Development - JCU</div>
+<div id="container"> <!-- #BeginEditable "main table" -->
+  <h1>Practical - JavaScript</h1>
+  <div class="notebox">
+    <h4>Note</h4>
+    <p>This is not a  walk-through style prac with step-by-step instructions. <br>
+    Use the resources and sample code you've been given as references, and work with other students and your lecturer to achieve these tasks.</p>
+  </div>
+  <h2>Aim:</h2>
+  <ul>
+    <li class="first">To practise using JavaScript for client-side interactivity, focused on forms.</li>
+  </ul>
+  <h2>Tasks:</h2>
+  <ol>
+    <li>Download the jsFormExamples.html and scripts.js files from <a href="https://github.com/lindsaymarkward/JavaScriptExamples" target="_blank">https://github.com/lindsaymarkward/JavaScriptExamples</a> and spend a minute or two trying out the functionality (read the notes at the bottom of the Web page).</li>
+    <li>Edit the file and experiment with different techniques...</li>
+    <li>Modify this form to achieve the following:
+      <ol>
+        <li>Use the tick/cross image changing so that the required fields show crosses until they have valid entries in them (note that name might be valid but then the user could delete the name, so the tick should turn back to a cross).</li>
+        <li>Notice how you can address any object and change its attributes, including CSS properties...<br>
+        Try setting some onfocus events for fields that don't do anything and set some CSS properties - like rounded corners for text fields, background-color for fieldsets... just to see how it works and practise it.</li>
+        <li>You can see in a couple of places where the code gets the value of a text field... <br>
+          Make two new fields (don't have to be in this same form) that you can enter a width and height into;<br>
+          Use the values the user enters in here to set the width and height of an image on
+          the page<br>
+          Also, write the total pixels (width * height) to the screen (using innerHTML)... this would be part of what you need to do for your shopping cart (total).
+          <br>
+        </li>
+      </ol>
+    </li>
+    <li>Work on a form from your major project and add JavaScript form validation and interactivity as appropriate to your site requirements.</li>
+  </ol>
+  <p>&nbsp;</p>
+<!-- #EndEditable --></div>
+<div id="footer">
+  <p>&copy; Lindsay Ward, <a href="http://www.jcu.edu.au/" target="_blank">James Cook University</a> | <a href="#header" target="_self">To Top</a></p>
+</div>
+</body>
+<!-- #EndTemplate --></html>

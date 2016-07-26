@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en"><!-- #BeginTemplate "/Templates/mainAll.dwt" --><!-- DW6 -->
+<meta charset="utf-8">
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>CP1406 - Web Design - Practical 01</title>
+<!-- #EndEditable -->
+<meta charset="UTF-8">
+<style media="screen" type="text/css">
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0;
+}
+h1, h2, h3, h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+h4 {
+	font-style: italic;
+}
+li {
+	margin-bottom: 0.75em;
+}
+.smaller {
+	font-family: "Times New Roman", Times, serif;
+	font-size: small
+}
+code, .codeandnames {
+	font-family: "Courier New", Courier, mono;
+	text-decoration: none;
+	font-weight: bold
+}
+
+code.section {
+	display:block
+	margin-top: 1em;
+}
+.highlightcolour {
+	color: #FF3300;
+	background-color: #FFFFFF
+}
+.breakhere {
+	page-break-before: always
+}
+.rightpanel {
+	clear: both;
+	float: right;
+	background-color: #f0f3ff;
+	margin-right: .2em;
+	width: 25%;
+	margin-left: 1em;
+	margin-bottom: 30px;
+	border: 1px solid #97bfff;
+}
+.rightpanel h4 {
+	background-color: #FFFFCC;
+	font-size: 0.8em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+.rightpanel p {
+	font-size: 0.9em;
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+.notebox {
+	clear: both;
+	background-color: #FFFFCC;
+	border: #97bfff 1px solid;
+	margin-right: 1.2em;
+	margin-left: 1.2em;
+}
+.notebox h4 {
+	font-size: 1.1em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 1em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: #97bfff;
+}
+.notebox p {
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+	font-size: 0.7em;
+	padding: 5px 3px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #5c5f72;
+	font: 'BazarMedium', Arial, sans-serif;
+	border-radius: 15px 15px 0px 0px;
+	box-shadow: 5px -5px 5px #666;
+}
+#container {
+	margin: 1em;
+}
+#header {
+	padding: 5px 15px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #2c2e38, 2px 2px 0px #5c5f72;
+	font: 1.5em 'BazarMedium', Arial, sans-serif;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 5px 5px 5px #666;
+}
+#footer a {
+	color:#FC3;
+}
+</style>
+</head>
+<body>
+<div id="header">CP1406 - Web Design &amp; Development - JCU</div>
+<div id="container"> <!-- #BeginEditable "main table" -->
+  <h1>Practical - Good Websites &amp; Dreamweaver </h1>
+  <p>Before we start making things, we're going to do an exercise focusing on the question, &quot;<strong>what makes a good website?</strong>&quot;</p>
+  <p>Pair up with the person next to you (or make a group of 3) and <strong>write down</strong> the attributes that you think good websites have.</p>
+  <p>We will then collate and discuss these as a group and determine our priorities...</p>
+  <p>&nbsp;</p>
+  <div class="notebox">
+    <h4>Note</h4>
+    <p>The prac work in this subject uses Adobe Dreamweaver (and later Photoshop) in places, but you may use whatever you like to build websites in the subject. We highly recommend <a href="https://www.jetbrains.com/phpstorm/" target="_blank">PHPStorm</a>, which you can find a licence for on LearnJCU or the free open source tool <a href="http://brackets.io" target="_blank">Brackets</a>, both of which should be available on the JCU computers. Most other tools like this are code editors that are great for writing HTML, CSS and JavaScript, but they are not WYSWIG (What You See Is What You Get) editors like Dreamweaver. <br>
+    <a href="https://www.sitepoint.com/premium/courses/quick-coding-with-brackets-2887" target="_blank">SitePoint has a video course on Brackets here</a>.</p>
+    <p>This prac is not the sole resource for Dreamweaver learning. Please refer to Dreamweaver Help (F1), <a href="https://www.sitepoint.com/premium/topics/search?q=dreamweaver" target="_blank">SitePoint Premium videos</a>, other sites, etc...<br />
+The Help for Dreamweaver has a lot of useful tutorials - check it out some time soon. </p>
+    <p>The screenshots in this walk-through are from a Mac version, but you shouldn't have any trouble using this prac with a Windows version.</p>
+  </div>
+  <p>&nbsp;</p>
+  <h2>Aims:</h2>
+  <ul>
+    <li>To get familiar with the Dreamweaver interface.</li>
+    <li>To learn to create a defined <strong>Site </strong>to enable site management (not just single file editing).</li>
+    <li>To improve your understanding of HTML and CSS by working in <strong>Split View</strong>.</li>
+    <li>To use headings, lists, paragraphs, images, links and styles to create a small site containing basic Web pages.</li>
+    <li>To find suitable resources for learning more.</li>
+    <li>To want to learn more!</li>
+  </ul>
+  <p>&nbsp;</p>
+  <h2>Get Started:</h2>
+  <p>To gain experience with Dreamweaver, you are going to make a basic 3-page website about yourself, like a portfolio. Follow the instructions, but get interested and do extra stuff if you can.</p>
+  <ul>
+    <li>Run Dreamweaver. <br />
+    It will either start with a blank screen (and you use the File menu to create a new page), or it will have a launch window with options for creating a new page. If it starts with a tour, press Escape to get out of it.</li>
+    <li>Create a new, blank HTML page (no template, just start blank), by:<br />
+    Clicking on the <strong>File </strong>menu and choosing <strong>New...</strong>    </li>
+    <li>Arrange the windows... You should see a drop-down option at the top right that says &quot;Extract&quot;, or you can choose Window &gt; Workspace Layout... either way, <strong>change this to &quot;Design&quot;</strong>.</li>
+    <li>Click on <strong>Split</strong> so you see Code (HTML) and the Design canvas at the same time. You can swap this view between horizontal and vertical in the View menu.<br />
+      Please <strong>ALWAYS</strong> use this view (unless you temporarily need to use another view). <br />
+      It will help you learn how the HTML and CSS code works without having to waste time writing HTML directly.<br>
+      <strong><em>This is rule #2 for using Dreamweaver - always use Split view</em></strong><br />
+    <img src="splitView.png" width="313" height="83" alt="Split View" />    </li>
+    <li>Type a few things in the Design side and watch what happens in the Code view... magic!</li>
+    <li>Look around at the different panels/windows and think about what they might be used for. If you can't see the <strong>properties panel</strong> (usually down the bottom), select it from the <strong>Window</strong> menu.</li>
+  </ul>
+  <h2>Wait!</h2>
+  <div class="notebox">
+    <h4>Important</h4>
+    <p>You will  rarely want to make a stand-alone file that has no other files associated with it. Mostly you will work on a <strong>site</strong> with multiple, related files (pages, CSS, images, scripts...).<br />
+      Dreamweaver helps you by letting you <strong>define a site</strong>. Please ALWAYS work in a defined site. <br />
+      Many problems (incorrect links mostly) are caused by not working in a defined site.<br />
+      A site definition is just information about the site, not the site contents itself. Unless you're on your own computer, Dreamweaver will not remember the site definition, so you have to set it up each time, but it only takes 30 seconds, so do it every time!<br>
+    </p>
+  </div>
+  <ul>
+    <li>From the <strong>Site </strong>menu, choose <strong>New Site</strong>.</li>
+    <li>Give your site a name, like Prac01-AboutMe</li>
+    <li>In Local Site Folder, select a folder on your machine or USB drive - <strong>making a new empty folder</strong> for your site. <br />
+      Please make a new folder. Don't use an existing folder like the desktop, or the items  on the desktop will become part of your site.<br />
+      <img src="newSite.png" width="707" height="330" alt="new site in Dreamweaver" /><br />
+    </li>
+    <li>That's all we need for now. Later we can set more options like a remote server for uploading to.</li>
+    <li>If you ever see &quot;<span style="color: blue; text-decoration: underline;">Manage Sites</span>&quot; in blue in your Files panel it means you are not working in a defined site... <br>
+      <img src="manageSites.png" width="279" height="112" alt="Manage Sites" /><br />
+    Stop and correct that - choose an existing site or define a new one. Otherwise, you can end up with problems due to incorrect file management - like broken links.<br />
+    You will have to do this every time you launch Dreamweaver on lab machines (on your own computer it will remember your sites).<br>
+    <br>
+    <em><strong>This is rule #1 for using Dreamweaver - always work in a defined site.</strong></em><br />
+    </li>
+  </ul>
+  <h2>Home Page</h2>
+  <ul>
+    <li>Spend a few minutes making  the first page, containing at least:
+      <ul>
+        <li>Your name as a <strong>Heading 1</strong> at the top</li>
+        <li>A photo of you (or someone like you)<br />
+        First save an image file into
+        the root directory of your site (or in a sub-folder called images), then you can insert images by choosing <strong>Image </strong>from the <strong>Insert </strong>menu, or pressing the shortcut key, or using the Insert panel if you like that sort of thing.<br>
+        </li><li>A paragraph that introduces you very briefly.</li>
+      </ul>
+    </li>
+    <li>Save this page as <code>index.html</code><br />
+      (It should be EXACTLY that - not Index.html or index.htm or something else.)
+        <br>
+        We'll talk about why later on, but it's the default home page file for Apache servers.
+    </li>
+    <li>Preview this Web page by pressing Alt+F12, or click the button that looks like a globe up the top. 
+Does it look any different in the browser than it does in Dreamweaver? (Sometimes it does, so use this feature to test your work in addition to Dreamweaver's Live view. Don't trust Dreamweaver to show you what it looks like in a browser.)<br />
+Rather than using this every time you want to see it in a browser (you could end up with lots of browser windows open), you can just save the file each time, switch to the browser (Alt+Tab) and press reload (Ctrl+R). Don't close your browser.
+    It's quicker that way.</li>
+  </ul>
+  <h2>More Pages</h2>
+  <p>You are going to make two more pages - <strong>History</strong> and <strong>Study</strong>.<br />
+  Start these off very briefly, as the content is not the most important thing, but we need some content to practise formatting it.</p>
+  <ul>
+    <li>Create a second page (new file) for History and give it a similar title and, at least, appropriately formatted (lists, paragraphs?):
+      <ul>
+        <li>where you were born </li>
+        <li>past jobs</li>
+        <li>your first memory of using the Web</li>
+      </ul>
+    </li>
+    <li>Save this page as <code>history.html</code> - It's best not to use spaces in any filenames for the Web, and they should always be logical names, not page2.html, which you won't recognise later.</li>
+    <li>Give each page a proper <strong>title</strong> (see the Title text field in the Dreamweaver interface). A good option is to include both the <em>page</em> name and the <em>site</em> name, e.g. <strong>About Adam - History</strong>.</li>
+  </ul>
+  <h2>Now we need to make links...</h2>
+  <ul>
+    <li>On the home page, down the bottom, type History, select that text, then make it into a link to your History page.<br />
+You can make this link a number of ways:<br>
+      ... try each of these methods at least once with the other links...
+      <ol>
+  <li>Type the link (filename) in the Link box in the properties panel.<br>
+<img src="propertiesLink.png" width="741" height="72" alt="properties panel - link" />
+</li>
+  <li>Click on the file browser button next to the Link box and choose the file.</li>
+  <li>Drag the cool little target icon next to the Link box and drag the arrow to the file in your Files panel to the right.</li>
+</ol>
+</li>
+    <li>Make a link on the History page to your home page. Great. </li>
+    <li>Now create your Study page, with a list of your current subjects and your study goal - what you hope to achieve with your course.</li>
+    <li>Create basic text links between each page so you can get to every page from any page in your site.</li>
+    <li>Test the whole site (every link on every page) in your Web browser.</li>
+  </ul>
+  <h2>CSS</h2>
+  <p>... We will learn lots more later, but let's get started with very basic CSS already...</p>
+  <p>As you should know, the basic rule is that you use HTML for your <strong>logical document structure </strong> - what it is, e.g. paragraphs are <code>&lt;p&gt;</code> and main headings are <code>&lt;h1&gt;</code>, then you use CSS for your <strong>visual display</strong> - what it looks like.</p>
+  <ul>
+    <li>Let's start with the heading on the home page. <br />
+      <img src="CSSnewSource.png" width="279" height="119" alt="CSS new source" style="float:right"/>Click on your main heading, then find the CSS Designer panel, find the little <strong>+</strong> icon next to Sources and click on it to add a new style sheet file. <br />
+    </li>
+    <li>Give your new CSS file a logical name like <code>mainstyles.css</code> and save it.</li>
+    <li><img src="CSSnewSelector.png" width="273" height="245" alt="CSS new selector" style="float:right"/>Then select this file in the Sources section and click the <strong>+ </strong>button below next to Selectors.</li>
+    <li><code>body h1</code> should then be selected automatically for you, because you clicked on the heading before adding the new rule. Delete the word body and press Enter.</li>
+    <li>This results in a whole bunch of CSS properties appearing at the bottom of the CSS Designer window. <br>
+      Spend a while changing fonts and other things, but don't get too carried away!<br />
+    </li>
+    <li>You can re-style any existing HTML tags by doing this. The one we have done will apply to any <code>h1</code> (heading 1) tags in this page, not just the one we selected.</li>
+    <li>Now create a new style in this sheet for the <code>body</code> and change the (default) font to something you like that suits the content.</li>
+  </ul>
+  <h3>Reuse those styles</h3>
+  <ul>
+    <li>We want all 3 of our pages to use this same style sheet, so we need to link them up as well...<br />
+      Open 
+      or switch to the other pages to edit them, then click the + button for Sources, click &quot;Attach Existing CSS File&quot; option then choose the file we made earlier, mainstyles.css (or whatever you called it).<br />
+    You should see the style applied to the page.</li>
+    <li>      Do this for all of your pages, then use the <strong>Save All </strong>option from the <strong>File </strong>menu to save any files you've edited, and preview the site in a browser. <br />
+    Notice that the styles you defined  now apply to all pages in the site. Nice. </li>
+    <li>Dreamweaver just added a line of HTML code to your <code>&lt;head&gt; </code>section, so look at the source code for your page (near the top) to find the newly added <code>&lt;link&gt;</code> tag. <br />
+    This means that the HTML page is linked to this style sheet and will display according to the styles in that file.</li>
+  </ul>
+  <h2>More CSS - Code</h2>
+  <p>Let's take a quick look behind the scenes...</p>
+  <ul>
+    <li>      For any of your pages, you will now see a new option up the top where you can choose to view the HTML code or CSS code. Click to view the CSS.<br />
+    </li>
+    <li>You can enter CSS code directly in here. Position your cursor just to the right of the last semi-colon  inside the body style and press Enter. <br />
+      Dreamweaver brings up a drop-down list with every CSS property it knows.</li>
+    <li>Start typing <strong>background-color</strong> and choose it (you can press Enter to choose the one that's highlighted), then choose the colour palette from the next list that pops up (down).<br />
+      Save and check this out (your pages should all have the same background colour now). </li>
+    <li>Remember we were going to get rid of the blue border for image links (which you might only see in older browsers)... so click on the first simple image link you made earlier.</li>
+    <li>Now choose the <strong>Selectors + </strong>button again.</li>
+    <li> Modify the selection to &quot;a img&quot; which would select all images (img) inside anchor (a) tags </li>
+    <li>In the properties section below, choose <strong>Border</strong> from the top icons (hover over to see what each one is), then scroll down to find <strong>border-style </strong>and choose <strong>none</strong>. <br />
+    Your image borders should be gone for all images that are links.</li>
+  </ul>
+<p>Keep going along doing what you can and repeating what you've learned in different ways until you have a 'finished' site. <br />
+  Repetition will really really really help you get used to this sort of thing, so this week, try making <strong>two more</strong> complete, simple websites like this one, using the techniques you have learned today and any new ones you can pick up in your research. <br />
+  Rinse; repeat.</p>
+  <p>Make sure you save your site files, as you will need them again next week.</p>
+<h2>★Remember!★</h2>
+<p>There are two important rules for working in Dreamweaver:</p>
+<ol>
+  <li>Always work in a <strong>defined site</strong></li>
+  <li>Always use <strong>split view</strong></li>
+</ol>
+<h2>Now try PHPStorm</h2>
+<p>If you have used Dreamweaver for all of this, have a go at using <strong>PHPStorm</strong> to make one new page using HTML code and link it in to your simple website.<br>You will make a page for your favourite foods.</p>
+  <ol>
+    <li>Launch PHPStorm.<br>
+    If this is on your own computer, download it from the <a href="https://www.jetbrains.com/phpstorm/" target="_blank">PHPStorm website</a><br>
+    You can sign up for free JetBrains licences (including PHPStorm, IntelliJ, PyCharm…) at: <a href="https://www.jetbrains.com/shop/eform/students" target="_blank">https://www.jetbrains.com/shop/eform/students</a> Make sure to use your JCU email address.<br>
+    Then enter your account details when you first run PHPStorm to get full access to the software.
+    </li>
+    <li>You don't need a "project", just choose "Open" and navigate to the folder where your new website is.</li>
+    <li>Create a new HTML file, call it food.html<br>You will notice that PHPStorm made a file with existing "boiler plate" HTML code, which is nice. <img src="PHPStormNewFile.png" alt="PHPStorm new file" width="386" height="227" style="float: right;"></li>
+    <li>Fill in the title element at the top, then start adding content inside the body tag...<br>
+    You will notice that each time you open a tag, the editor adds the closing tag for you. This and many other nice features make editing code with a good IDE like this much nicer than using a plain text editor.</li>
+    <li>Add some brief details about your favourite foods, then get one photo of some nice food. Try <a href="http://freeimages.com" target="_blank">freeimages.com</a> to find some free, non-copyright images - but don't spend more than 2 minutes finding images.<br>Save your image in the same folder as your other image(s) for the site. <br>
+      Note: EVERYTHING must be under your root directory, but you can have subdirectories for things like images.</li>
+    <li><img src="PHPStormAutocompleteIMG.png" alt="PHPStorm Autocomplete img" height="114" width="255" style="float: right;"> Now when you add HTML to show your image, note all the things PHPStorm can auto-complete for you... as you type, press Enter as soon as it comes up with the item you want. E.g. type <strong>&lt;img</strong> and when you press space you'll see a drop-down suggesting to add <strong>src</strong> so press Enter.<br>Then you get a drop-down of files to choose from. Add height and width attributes and notice that the values are pre-filled... <br>just press Enter... the good news is, it's always right! It won't offer attributes or values that aren't valid.</li>
+    <li>Add a link back to your home page using the &lt;a&gt; tag, plus links to the Food page from the rest of your site, and test everything.<br>Complete and fix it until it makes you feel very happy.</li>
+  </ol>
+<!-- #EndEditable --></div>
+<div id="footer">
+  <p>&copy; Lindsay Ward, <a href="http://www.jcu.edu.au/" target="_blank">James Cook University</a> | <a href="#header" target="_self">To Top</a></p>
+</div>
+</body>
+<!-- #EndTemplate --></html>

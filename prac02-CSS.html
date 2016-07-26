@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en"><!-- #BeginTemplate "/Templates/mainAll.dwt" --><!-- DW6 -->
+<meta charset="utf-8">
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>CP1406 - CSS Practical</title>
+<style type="text/css">
+<!--
+a:hover.awful {
+	color:#FFF; background-color:#FF6; font-size:x-large; margin:5em; border:groove thick red; font-family:Comic Sans, Tahoma, Geneva, sans-serif
+}
+-->
+</style>
+<!-- #EndEditable -->
+<meta charset="UTF-8">
+<style media="screen" type="text/css">
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin: 0;
+}
+h1, h2, h3, h4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+h4 {
+	font-style: italic;
+}
+li {
+	margin-bottom: 0.75em;
+}
+.smaller {
+	font-family: "Times New Roman", Times, serif;
+	font-size: small
+}
+code, .codeandnames {
+	font-family: "Courier New", Courier, mono;
+	text-decoration: none;
+	font-weight: bold
+}
+
+code.section {
+	display:block
+	margin-top: 1em;
+}
+.highlightcolour {
+	color: #FF3300;
+	background-color: #FFFFFF
+}
+.breakhere {
+	page-break-before: always
+}
+.rightpanel {
+	clear: both;
+	float: right;
+	background-color: #f0f3ff;
+	margin-right: .2em;
+	width: 25%;
+	margin-left: 1em;
+	margin-bottom: 30px;
+	border: 1px solid #97bfff;
+}
+.rightpanel h4 {
+	background-color: #FFFFCC;
+	font-size: 0.8em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+.rightpanel p {
+	font-size: 0.9em;
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+.notebox {
+	clear: both;
+	background-color: #FFFFCC;
+	border: #97bfff 1px solid;
+	margin-right: 1.2em;
+	margin-left: 1.2em;
+}
+.notebox h4 {
+	font-size: 1.1em;
+	margin: 0px;
+	font-style: normal;
+	padding-left: 1em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: #97bfff;
+}
+.notebox p {
+	margin: 0px;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+#footer {
+	position: relative;
+	clear: both;
+	text-align: center;
+	font-size: 0.7em;
+	padding: 5px 3px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #5c5f72;
+	font: 'BazarMedium', Arial, sans-serif;
+	border-radius: 15px 15px 0px 0px;
+	box-shadow: 5px -5px 5px #666;
+}
+#container {
+	margin: 1em;
+}
+#header {
+	padding: 5px 15px;
+	background-color: #2c2e38;
+	color: #d7ceb2;
+	text-shadow: 1px 1px 0px #2c2e38, 2px 2px 0px #5c5f72;
+	font: 1.5em 'BazarMedium', Arial, sans-serif;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 5px 5px 5px #666;
+}
+#footer a {
+	color:#FC3;
+}
+</style>
+</head>
+<body>
+<div id="header">CP1406 - Web Design &amp; Development - JCU</div>
+<div id="container"> <!-- #BeginEditable "main table" -->
+  <h1>Practical - CSS </h1>
+  <div class="notebox">
+    <h4>Notes</h4>
+    <p>This prac is not the sole resource for CSS learning. Please refer to your books, videos, Dreamweaver help...</p>
+    <p>If you're not using Dreamweaver, you can do all of this in PHPStorm or similar - just writing HTML and CSS code directly.</p>
+  </div>
+  <h2>Aim:</h2>
+  <ul>
+    <li class="first">To use styles (CSS) to format all fonts, colours, borders, margins, etc. for the mini site you made (about yourself) from week 2. If you don't have that with you, you can use another site you've been working on, or quickly make up a two- or three-page website with some text, lists, headings, links and images.</li>
+    <li>To learn to use <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> to create areas (logical sections) to apply styles to.</li>
+    <li>To learn to use <strong>#</strong> for <strong>id</strong>, and <strong>.</strong> for <strong>class</strong> for their appropriate purposes.</li>
+  </ul>
+  <h2>Example:</h2>
+  <p>This page that you're looking at uses some nice styles. An example with these and some other styles is available (download <strong>cssExample.zip</strong> from LearnJCU) for you to inspect.</p>
+  <p class="notebox">The note box above is styled using a class (called notebox), applied to a div (logical division). This class can be reused for other boxes like this one, which looks different because it doesn't have a heading.</p>
+  <p>The &quot;Note&quot; text is inside an <code>&lt;h4&gt;</code> element, and the rest of the text is inside a <code>&lt;p&gt;</code>, like:</p>
+  <p><code> &lt;div class=&quot;notebox&quot;&gt;<br />
+&nbsp;&nbsp;&lt;h4&gt;Note&lt;/h4&gt;<br />
+&nbsp;&nbsp;&lt;p&gt;This prac is not the sole resource for CSS learning. Please refer to ...&lt;/p&gt;<br />
+&lt;/div&gt;</code></p>
+  <details open>(in HTML5, h1..h6 are actually treated as generic headings with their level determined by the nesting of the section they are in)</details>
+  <p>The CSS code for the styles is in the same file as this (we would normally use an external CSS file, but that's not easy on LearnJCU), and is:</p>
+  <p><code>.notebox {<br />
+&nbsp;&nbsp;clear:both; background-color:#FFFFCC;<br />
+&nbsp;&nbsp;border:#97bfff 1px solid; margin-right: 1.2em; margin-left: 1.2em;<br />
+}<br />
+.notebox h4 {<br />
+&nbsp;&nbsp;font-size: 0.8em; margin:0px; font-style:normal;<br />
+&nbsp;&nbsp;padding-left:1em; padding-right:0.3em; padding-top:0.2em; padding-bottom:0.2em;<br />
+&nbsp;&nbsp;background-color:#97bfff;<br />
+}<br />
+.notebox p {<br />
+&nbsp;&nbsp;font-size:0.8em; margin:0px;<br />
+&nbsp;&nbsp;padding-left:0.3em; padding-right:0.3em; padding-top:0.5em; padding-bottom:0.2em;<br />
+}</code></p>
+<p class="notebox">For the actual styles used in this page, view the source of the file. <br />
+  Leave this open in a separate window throughout the prac work. <br />
+  You might also like to copy the CSS (everything inside the &lt;style&gt; element) into a .css file in Dreamweaver or Brackets so you can see it easily (including source colouring).</p>
+<p>What the above code means, is...</p>
+<p>The first style is a class called notebox: the . in front of the name means that it can be applied using the class attribute. Inside the { } braces are a number of declarations (properties and values) to define what this should look like.</p>
+<p>In the HTML code, the class attribute is set like  <code>&lt;div class=&quot;notebox&quot;&gt;...&lt;/div&gt;</code> (no dot used here).</p>
+<p>The second style's selector is <code>.notebox h4</code> - note the space - so it applies to all <code>&lt;h4&gt;</code> elements that are <em>inside</em> any notebox class.</p>
+<p>See if you can tell what the third style applies to...</p>
+<p>In HTML, you choose to use <code>&lt;div&gt;</code> for logical block-level sections (that have a line break before and after), and you use <code>&lt;span&gt;</code> for inline styles, like <span class="highlightcolour">highlighting some text</span> in a sentence.</p>
+<p><code>&lt;div&gt;</code> is a <strong>block</strong> element (like p), <code>&lt;span&gt;</code> is <strong>inline</strong> (like img).</p>
+<p class="notebox">HTML5 added a number of new elements for sectioning content that all work a lot like divs, including section, article, aside... These are all block-level elements.</p>
+<h2>Let's Get Stylin'</h2>
+<p>Here are some <strong>basic </strong>instructions to get you started... </p>
+<p> You will use Dreamweaver's CSS Designer panel (if it's not visible, choose it from the Window menu) and write some code directly. You will need to be able to write CSS code by hand for your exam.</p>
+<p>Get your site from last week (About Me) ready in Dreamweaver - set up as a <strong>defined site</strong>.<br>
+  Adjust your workspace so you can see the design view, code view, properties panel, files window and CSS Designer all at the same time.
+</p>
+<p>All of the styles you make should go into your external style sheet file - select this in the &quot;Sources&quot; section of CSS Designer window.</p>
+<ol>
+  <li>You can redefine the look  of any HTML element without re-writing any HTML. <br>
+    That's why you should always choose the right/best elements to start with. <br />
+    Style all &lt;h1&gt; headings to use italics by typing the following code in your existing styles file (you can change it back later if you like):<br />
+    <code class="section">h1 { font-style:italic; }</code><br />
+    </li>
+  <li>Now set the default font for all text, using something like the code below... but this time don't type it in. Use the CSS Designer panel to select the body and set these properties (with actual values as you wish):<br />
+    <code class="section">body { background-color: #ffffff; color: #000000; font-family: Arial, Helvetica, sans-serif;	text-align:left; }</code><br />
+  </li>
+  <li>Let's section up some content on our site - starting with the home page.<br>
+    Create a header: You can either use the HTML5 <code>&lt;header&gt;</code> element or use <code>&lt;div id=&quot;header&quot;&gt;</code>... we'll use &lt;header&gt; today.
+<ul>
+  <li>Select the top section (probably just a text heading) with your mouse and press Ctrl+T (or Cmd+T on Mac) to get to wrap tag (press it multiple times to cycle through different options):<br>
+    <img src="wrapTag.png" width="407" height="171" alt="Wrap tag in Dreamweaver"/><br>
+  Type header (not head) and press Enter</li>
+  <li>This doesn't do much yet, but we can now apply a style to it.<br>
+    Select it in the CSS Designer panel and adjust at least the following properties, watching it change as you do (perhaps use live view):
+    <ul>
+      <li>border</li>
+      <li>background-color</li>
+      <li>margin</li>
+      <li>padding</li>
+    </ul>
+  </li>
+  <li>Do the same thing for a <code>&lt;footer&gt;</code> at the bottom of your page - adding some content if you don't have anything there. <br>
+    Style this to complement your header. You might like to experiment with things like rounded corners - check this page's styles for an example
+  </li>
+  <li>Do it one more time for <code>&lt;nav&gt;</code> - and put your page navigation in the nav section.</li>
+  <li>You should now have a fairly well structured page with a header, footer, nav and a middle bit... which also should have some structure... <br>
+  So wrap your &quot;middle bit&quot; in a <code>&lt;section&gt;</code> tag, giving it the id &quot;main&quot;, i.e. <br>
+  <code>&lt;section id=&quot;main&quot;&gt;</code>  </li>
+  <li>Now you can style your main section using an id selector (#main). Do this now... (you probably want to add some margin-left)</li>
+  <li>Lastly, try using a &lt;span&gt; element and styling this: <br>
+    Select some text
+  with your mouse and press Ctrl+T to wrap tag, and type &lt;span class=&quot;highlight&quot;&gt;<br>
+  Then create a style for highlight, <span class="highlightcolour">remembering that class selectors start with a . in CSS.</span></li></ul></li>
+</ol>
+<div class="notebox">
+  <h4>Testing</h4>
+  <p>A useful thing to do is to disable styles in your browser and make sure that the structure of your page still looks accurate. <br>
+    In Firefox you can choose View &gt; Page Style &gt; No Style<br />
+    Your headings should still look like headings, your paragraphs like paragraphs, etc.</p>
+</div>
+<p>Spend some time now adding more styles to your  website until you're reasonably happy with it (but don't spend too long). </p>
+<p><strong>Let's try the pseudo-class selectors for hovering over links...</strong></p>
+<ol>
+  <li>Make sure you've got some links in the HTML document you're styling. (You should.)</li>
+  <li>Create a new style rule with code, using the selector <code>a:hover</code></li>
+  <li>Change  an obvious property like  colour or background colour, and test your results.<br />
+    You will sometimes see <em>dodgy</em> styles that use a different font size for the rollover effect. This is not a good idea because then your page &quot;jumps around&quot; as the text changes size. Perhaps try it and see how awful you can make it :) <a href="#" class="awful">Can you make one worse than this? (rollover this link now)</a></li>
+  <li>You can use the same methods to set <code>a:visited</code> and the others - try it.<br />
+    Some designers intentionally change the visited link colour so that it is the same as the other links. Why is this not usually a good idea?</li>
+  <li>You can create fairly convincing-looking &quot;buttons&quot; without images using CSS and properties like background-color, padding, margin and border, then assigning a different background-color for the hover effect. See the example &quot;site&quot; also linked from LearnJCU for this prac (download the zip file and extract it to check it out).<br />
+    The example also has code for using a different style sheet (also included) when you print it. Print to PDF to see what it looks like.
+  </li>
+  <li>You can also find good tutorials on how to use the hover pseudo-class with the background-image property to create rollover buttons (no JavaScript required) - e.g. <a href="http://www.elated.com/articles/css-rollover-buttons/" target="_blank">http://www.elated.com/articles/css-rollover-buttons/</a><br />
+    (If you know any other good sites, please post them on the discussion board.)
+    <br />
+    If you're keen, try this
+    out with your site from this week:
+    <ol>
+      <li> Create (slice) buttons in Photoshop and create rollover images (something a bit different so you see the effect) the same size (or you could use the &quot;stacked&quot; image option like in the tutorial linked to above)</li>
+      <li>Export your images/site and get it ready</li>
+      <li>Use the id attribute to give your buttons unique names</li>
+      <li>Use the # identifier in CSS to style each button so that it hovers with the right background image.</li>
+      <li>In <a href="http://www.webcredible.co.uk/user-friendly-resources/css/rollover-buttons.shtml" target="_blank">webcredibal's CSS rollover buttons </a>tutorial they have a normal &lt;img...&gt; for the main button, and a background image that can't be seen until the rollover, when the main image's <code>visibility</code> property is set to &quot;hidden&quot; (and then back to &quot;visible&quot; on rollout). Try this nice technique if you like.</li>
+      </ol>
+  </li>
+  </ol>
+<h2>Print Styles</h2>
+<ul>
+  <li>One of the great things about CSS is using different style sheets for different purposes. The CSS example for this prac uses a second set of styles for print view. </li>
+  <li>Have a look at this and test it by printing to PDF...</li>
+  <li>See how it works and then... <br>
+    <strong>    Apply this technique to your own work.</strong></li>
+</ul>
+<p>Keep trying things out and noticing what Dreamweaver does in your code window. <br>
+  Don't worry if it's not all totally making sense just yet... keep at it and it pick up what you can. </p>
+<!-- #EndEditable --></div>
+<div id="footer">
+  <p>&copy; Lindsay Ward, <a href="http://www.jcu.edu.au/" target="_blank">James Cook University</a> | <a href="#header" target="_self">To Top</a></p>
+</div>
+</body>
+<!-- #EndTemplate --></html>
