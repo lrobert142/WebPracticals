@@ -162,13 +162,15 @@ The Help for Dreamweaver has a lot of useful tutorials - check it out some time 
     <li>Create a new, blank HTML page (no template, just start blank), by:<br />
     Clicking on the <strong>File </strong>menu and choosing <strong>New...</strong>    </li>
     <li>Arrange the windows... You should see a drop-down option at the top right that says &quot;Extract&quot;, or you can choose Window &gt; Workspace Layout... either way, <strong>change this to &quot;Design&quot;</strong>.</li>
-    <li>Click on <strong>Split</strong> so you see Code (HTML) and the Design canvas at the same time. You can swap this view between horizontal and vertical in the View menu.<br />
+    <li>Click on <strong>Split</strong> and make sure <strong>Design</strong> (not Live) is selected from the dropdown to the right so you see Code (HTML) and the Design canvas at the same time. You can swap this view between horizontal and vertical in the View menu.<br />
       Please <strong>ALWAYS</strong> use this view (unless you temporarily need to use another view). <br />
       It will help you learn how the HTML and CSS code works without having to waste time writing HTML directly.<br>
       <strong><em>This is rule #2 for using Dreamweaver - always use Split view</em></strong><br />
-    <img src="splitView.png" width="313" height="83" alt="Split View" />    </li>
+    <img src="designView.png" width="297" height="100" alt="Split View with Design View dropdown" />    </li>
     <li>Type a few things in the Design side and watch what happens in the Code view... magic!</li>
-    <li>Look around at the different panels/windows and think about what they might be used for. If you can't see the <strong>properties panel</strong> (usually down the bottom), select it from the <strong>Window</strong> menu.</li>
+    <li>Look around at the different panels/windows and think about what they might be used for. If you can't see the <strong>properties panel</strong> (usually down the bottom), select it from the <strong>Window > Properties</strong> menu or press CTRL+F3.<br>
+			<img src="propertiesToolbar.png" width="687" height="168" alt="Window dropdown for properties toolbar" />
+		</li>
   </ul>
   <h2>Wait!</h2>
   <div class="notebox">
@@ -211,7 +213,8 @@ The Help for Dreamweaver has a lot of useful tutorials - check it out some time 
         <br>
         We'll talk about why later on, but it's the default home page file for Apache servers.
     </li>
-    <li>Preview this Web page by pressing Alt+F12, or click the button that looks like a globe up the top. 
+    <li>Preview this Web page by pressing F12, or click the button that looks like a globe down the bottom.<br>
+			<img src="previewInBrowser.png" width="288" height="119" alt="Preview in browser icon location" /> <br>
 Does it look any different in the browser than it does in Dreamweaver? (Sometimes it does, so use this feature to test your work in addition to Dreamweaver's Live view. Don't trust Dreamweaver to show you what it looks like in a browser.)<br />
 Rather than using this every time you want to see it in a browser (you could end up with lots of browser windows open), you can just save the file each time, switch to the browser (Alt+Tab) and press reload (Ctrl+R). Don't close your browser.
     It's quicker that way.</li>
@@ -260,6 +263,11 @@ You can make this link a number of ways:<br>
     <li><code>body h1</code> should then be selected automatically for you, because you clicked on the heading before adding the new rule. Delete the word body and press Enter.</li>
     <li>This results in a whole bunch of CSS properties appearing at the bottom of the CSS Designer window. <br>
       Spend a while changing fonts and other things, but don't get too carried away!<br />
+			<ul>
+				<li>If you canot see any CSS properties, untick the "Show Set" box in the top-right of the CSS "Properties" tab. <br>
+					<img src="showSet.png" width="334" height="114" alt="Show set checkbox" />
+				</li>
+			</ul>
     </li>
     <li>You can re-style any existing HTML tags by doing this. The one we have done will apply to any <code>h1</code> (heading 1) tags in this page, not just the one we selected.</li>
     <li>Now create a new style in this sheet for the <code>body</code> and change the (default) font to something you like that suits the content.</li>
@@ -267,7 +275,7 @@ You can make this link a number of ways:<br>
   <h3>Reuse those styles</h3>
   <ul>
     <li>We want all 3 of our pages to use this same style sheet, so we need to link them up as well...<br />
-      Open 
+      Open
       or switch to the other pages to edit them, then click the + button for Sources, click &quot;Attach Existing CSS File&quot; option then choose the file we made earlier, mainstyles.css (or whatever you called it).<br />
     You should see the style applied to the page.</li>
     <li>      Do this for all of your pages, then use the <strong>Save All </strong>option from the <strong>File </strong>menu to save any files you've edited, and preview the site in a browser. <br />
@@ -284,11 +292,11 @@ You can make this link a number of ways:<br>
       Dreamweaver brings up a drop-down list with every CSS property it knows.</li>
     <li>Start typing <strong>background-color</strong> and choose it (you can press Enter to choose the one that's highlighted), then choose the colour palette from the next list that pops up (down).<br />
       Save and check this out (your pages should all have the same background colour now). </li>
-    <li>Remember we were going to get rid of the blue border for image links (which you might only see in older browsers)... so click on the first simple image link you made earlier.</li>
+		<li>Now we're going to get rid of the underlines from links... so click on the first simple text link you made earlier.</li>
     <li>Now choose the <strong>Selectors + </strong>button again.</li>
-    <li> Modify the selection to &quot;a img&quot; which would select all images (img) inside anchor (a) tags </li>
-    <li>In the properties section below, choose <strong>Border</strong> from the top icons (hover over to see what each one is), then scroll down to find <strong>border-style </strong>and choose <strong>none</strong>. <br />
-    Your image borders should be gone for all images that are links.</li>
+    <li> Modify the selection to &quot;a&quot; which would select all anchor (a) tags </li>
+    <li>In the properties section below, choose <strong>Text</strong> from the top icons (the T in a box), then scroll down to find <strong>text-decoration</strong> and choose <strong>none</strong>.<br />
+    The underlines should be gone for all text links.</li>
   </ul>
 <p>Keep going along doing what you can and repeating what you've learned in different ways until you have a 'finished' site. <br />
   Repetition will really really really help you get used to this sort of thing, so this week, try making <strong>two more</strong> complete, simple websites like this one, using the techniques you have learned today and any new ones you can pick up in your research. <br />
